@@ -1,75 +1,222 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>eMercado - Todo lo que busques está aquí</title>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>eMercado - Todo lo que busques está aquí</title>
+    <link href="css\my-profile.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i"
+      rel="stylesheet"
+    />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
       }
-    }
-  </style>
-</head>
 
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav w-100 justify-content-between">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="categories.html">Categorías</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="sell.html">Vender</a>
-          </li>
-          <li class="nav-item">
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
-    </div>
-  </main>
-  <footer class="text-muted">
-    <div class="container">
-      <p class="float-end">
-        <a href="#">Volver arriba</a>
-      </p>
-      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
-        2022</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-    </div>
-  </footer>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/my-profile.js"></script>
-</body>
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
 
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav w-100 justify-content-between">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="categories.html">Categorías</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sell.html">Vender</a>
+            </li>
+            <li id="yaNoSeNombredevaribles" class="nav-item"></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="container my-3">
+        <div class="row">
+          <form class="g-3 needs-validation" novalidate id="formulario">
+            <div >
+              <h3>Perfil</h3>
+              <img src="./img/img_perfil.png" class="imagen" id="imgPreview">
+            </div>
+          
+            <hr />
+            <div class="row mt-3">
+             
+              <div class="col-4">
+                <label for="first-name" class="form-label"
+                  >Nombre</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="first-name"
+                  required
+                />
+                <div class="invalid-feedback">La informacion no es correcta</div>
+              </div>
+
+              <div class="col-4">
+                <label for="second-name" class="form-label"
+                  >segundo nombre</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="second-name"
+
+                />
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <label for="first-surname" class="form-label"
+                  >Primer apellido</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="first-surname"
+                  required
+                />
+                <div class="invalid-feedback">La informacion no es correcta</div>
+              </div>
+
+              <div class="col-4">
+                <label for="second-surname" class="form-label"
+                  >segundo apellido</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="second-surname"
+                />
+            </div>
+
+            <div class="row">
+
+              <div class="col-4">
+                <label for="validationCustom05" class="form-label"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  required
+                />
+                <div class="invalid-feedback">La informacion no es correcta</div>
+              </div>
+
+              <div class="col-4">
+                <label for="foto" class="form-label"
+                  >Foto de perfil</label
+                >
+                <input
+                  type="file"
+                  class="form-control"
+                  id="foto"
+                  
+                />
+            </div>
+
+            <div class="row">
+
+              <div class="col-4">
+                <label for="validationCustom05" class="form-label"
+                  >Numero de contacto</label
+                >
+                <input
+                  type="text"
+                  class="form-control mb-3"
+                  id="contactnumber"
+                />
+                <div class="invalid-feedback">La informacion no es correcta</div>
+              </div>
+
+            </div>
+            <hr>
+            <button type="submit" id="boton">Enviar formulario</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-end">
+          <a href="#">Volver arriba</a>
+        </p>
+        <p>
+          Este sitio forma parte de
+          <a href="https://jovenesaprogramar.edu.uy/" target="_blank"
+            >Jovenes a Programar</a
+          >
+          - 2022
+        </p>
+        <p>
+          Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la
+          letra del obligatorio.
+        </p>
+      </div>
+    </footer>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/my-profile.js"></script>
+  </body>
 </html>

@@ -25,18 +25,50 @@
             <a class="nav-link" href="index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="categories.html">Categorías</a>
+            <a class="nav-link active" href="categories.html">Categorías</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="sell.html">Vender</a>
+              <a class="nav-link active" href="sell.html">Ventas</a>
           </li>
-          <li class="nav-item">
+          <li id="CorreoNav" class="nav-item">
+            
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <main class="pb-5 container">
+
+  <main class="container">
+      <div class="container cont-products">
+        <h2 class="text-center">Productos</h2>
+      </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-6 col-md-12 mb-1 container">
+          <div class="row container p-0 m-0">
+            <div class="col">
+            <button id="price" class="btn-filtro btn btn-light izq-btn">PrecioAsc</button>
+            <button id="price2" class="btn-filtro btn btn-light izq-btn">PrecioDesc</button>
+            <button id="relevance" class="btn-filtro btn btn-light izq-btn">Relevancia</button>
+            </div>
+            <div class="col">
+              <p class="font-weight-normal text-end my-2">Precio</p>
+            </div>
+            <div class="col">
+              <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
+            </div>
+            <div class="col">
+              <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
+            </div>
+            <div class="col-3 p-0">
+              <div class="btn-group" role="group">
+                <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
+                <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     <div class="container" id="container-autos"> 
       <br>
       <h1 class="text-center">Productos</h1>

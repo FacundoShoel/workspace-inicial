@@ -11,8 +11,10 @@ function sortCategories(criteria, array){
     if (criteria === ORDER_ASC_BY_NAME)
     {
         result = array.sort(function(a, b) {
-            if ( a.name < b.name ){ return -1; }
-            if ( a.name > b.name ){ return 1; }
+            if ( a.name < b.name )
+            { return -1; }
+            if ( a.name > b.name )
+            { return 1; }
             return 0;
         });
     }else if (criteria === ORDER_DESC_BY_NAME){
@@ -39,6 +41,7 @@ function setCatID(id) {
     localStorage.setItem("catID", id);
     window.location = "products.html"
 }
+
 
 function showCategoriesList(){
 
@@ -91,8 +94,11 @@ document.addEventListener("DOMContentLoaded", function(e){
     getJSONData(CATEGORIES_URL).then(function(resultObj){
         if (resultObj.status === "ok"){
             currentCategoriesArray = resultObj.data
+            
             showCategoriesList()
+            console.log(currentCategoriesArray)
             //sortAndShowCategories(ORDER_ASC_BY_NAME, resultObj.data);
+            
         }
     });
 

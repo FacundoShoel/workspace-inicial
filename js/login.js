@@ -1,14 +1,24 @@
 //variable que guarda elemento boton submit 
-let boton = document.getElementById('botonPrincipal');
+const boton = document.getElementById("botonPrincipal");
+//guardo el elemento input
+const INPUT_TEXT = document.getElementById("email");
+const INPUT_PASSWD  = document.getElementById("contraseña")
 
-boton.addEventListener('click',e=>{
-    let inputs = document.getElementsByClassName('form-control');
-    for (let i = 0; i < inputs.length; i++){ //input.length apunta a la cantidad de etiquetas que tengan la class="form-control"
-        if(inputs[i].value.length>0){//.value da como resultado un string y length cuenta la cantidad de caracteres de este.
-            window.location.href = "home.html";
-        }else{
-            alert("No estan completados los campos")
+
+boton.addEventListener('click',function(e){
+    e.preventDefault();
+    if(document.getElementById("email").value.length < 3){
+        alert("No colocaste los datos correctamente");
+        
+    }if(document.getElementById("contraseña").value.length < 3){
+        alert("No colocaste los datos correctamente");
     }
+    else{
+        window.location.href="home.html";
     }
+    let inputsemails = {
+        correo: document.getElementById("email").value
+    }
+    localStorage.setItem('correuser', JSON.stringify(inputsemails))
 })
 
